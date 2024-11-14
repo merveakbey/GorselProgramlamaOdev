@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.VucutKitleIndeksiPage"
+             Title="Vücut Kitle İndeksi">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+          
+            <Label Text="Vki=kg/((boy*boy)/10000)" FontSize="Medium"
+                   HorizontalOptions="Center" TextColor="Orange" />
+
+            
+            <Label Text="Kilonuz (KG):" FontSize="Small" />
+            <Slider x:Name="KiloSlider" Minimum="40" Maximum="200" ValueChanged="OnValueChanged" />
+            <Label x:Name="KiloLabel" Text="{Binding Source={x:Reference KiloSlider}, Path=Value, StringFormat='{0:F1} KG'}" FontSize="Medium" />
+
+            
+            <Label Text="Boyunuz (cm):" FontSize="Small" />
+            <Slider x:Name="BoySlider" Minimum="100" Maximum="220" ValueChanged="OnValueChanged" />
+            <Label x:Name="BoyLabel" Text="{Binding Source={x:Reference BoySlider}, Path=Value, StringFormat='{0:F1} cm'}" FontSize="Medium" />
+
+            
+            <Label Text="VKI:" FontSize="Small" />
+            <Label x:Name="VkiLabel" Text="0.0" FontSize="Medium" TextColor="Orange" />
+
+            
+            <Label x:Name="VkiDurumuLabel" Text="Durumunuz:" FontSize="Small" TextColor="Gray" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

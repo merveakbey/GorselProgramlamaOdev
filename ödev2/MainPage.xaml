@@ -1,0 +1,43 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.MainPage"
+             Title="Ana Sayfa">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15"
+                             BackgroundColor="#F0F0F5">
+
+            
+
+            
+            <Frame Padding="5" HasShadow="True" BorderColor="#6200EE"
+                   CornerRadius="10" HorizontalOptions="Center">
+                <Image Source="merveakbey.jpg" 
+                       WidthRequest="200" HeightRequest="300"
+                       HorizontalOptions="Center" Aspect="AspectFill"/>
+            </Frame>
+
+            
+            <Label Text="MERVE NUR AKBEY" FontSize="Large" 
+                   HorizontalOptions="Center" TextColor="#333333" 
+                   FontAttributes="Bold"/>
+
+           
+            <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" 
+                   FontSize="Medium" HorizontalOptions="Center"
+                   TextColor="#666666" FontAttributes="Italic"/>
+
+           
+            <Frame BackgroundColor="#FFEB3B" Padding="5"
+                   CornerRadius="10" HorizontalOptions="Center"
+                   WidthRequest="150">
+                <Label Text="ÖDEV-1" FontSize="Large" 
+                       HorizontalOptions="Center" TextColor="#333333" 
+                       FontAttributes="Bold"/>
+            </Frame>
+
+        
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

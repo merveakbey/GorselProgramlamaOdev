@@ -1,0 +1,49 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.KrediHesaplamaPage"
+             Title="Kredi Hesaplama">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <!-- Kredi Türü Seçimi -->
+            <Label Text="Kredi Türü" FontSize="Medium" TextColor="Black" />
+            <Picker x:Name="KrediTurleriPicker" >
+                <Picker.Items>
+                    <x:String>İhtiyaç Kredisi</x:String>
+                    <x:String>Konut Kredisi</x:String>
+                    <x:String>Taşıt Kredisi</x:String>
+                    <x:String>Ticari Kredisi</x:String>
+                </Picker.Items>
+            </Picker>
+
+           
+
+            
+            <Entry Placeholder="Kredi Tutarı (TL)" 
+                   Keyboard="Numeric" x:Name="KrediTutariEntry" />
+
+            
+            <Entry Placeholder="Faiz Oranı (%)" 
+                   Keyboard="Numeric" x:Name="FaizOraniEntry" />
+
+          
+            <Entry Placeholder="Vade (Ay)" 
+                   Keyboard="Numeric" x:Name="VadeEntry" />
+
+            
+            <Label Text="Aylık Taksit:" FontSize="Small" />
+            <Label x:Name="AylikTaksitLabel" Text="₺0.00" FontSize="Medium" />
+
+            <Label Text="Toplam Ödeme:" FontSize="Small" />
+            <Label x:Name="ToplamOdemeLabel" Text="₺0.00" FontSize="Medium" />
+
+            <Label Text="Toplam Faiz:" FontSize="Small" />
+            <Label x:Name="ToplamFaizLabel" Text="₺0.00" FontSize="Medium" />
+
+            
+            <Button Text="Hesapla" Clicked="OnHesaplaClicked" 
+                    BackgroundColor="Purple" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

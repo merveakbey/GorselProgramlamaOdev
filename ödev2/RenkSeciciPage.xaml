@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ödev2.RenkSeciciPage"
+             Title="Renk Seçimi">
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="10">
+          
+            <Label Text="Renk Seçimi"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,10"/>
+
+            
+            <Frame Padding="20" CornerRadius="10" BackgroundColor="#EEEEEE" HasShadow="True">
+                <VerticalStackLayout Spacing="15">
+
+                    
+                    <Label Text="Kırmızı Ton:" TextColor="Red"/>
+                    <Slider x:Name="RedSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                    
+                    <Label Text="Yeşil Ton:" TextColor="Green"/>
+                    <Slider x:Name="GreenSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                    
+                    <Label Text="Mavi Ton:" TextColor="Blue"/>
+                    <Slider x:Name="BlueSlider" Maximum="255" ValueChanged="OnColorSliderChanged"/>
+
+                   
+                    <HorizontalStackLayout Spacing="10">
+                        <Entry x:Name="ColorCodeEntry"
+                               IsReadOnly="True"
+                               Text="#000000"
+                               HorizontalOptions="FillAndExpand"/>
+                        <Button Text="📋" 
+                                Clicked="OnCopyColorCodeClicked" 
+                                WidthRequest="40"/>
+                    </HorizontalStackLayout>
+
+                   
+                    <Button Text="Random" Clicked="OnRandomColorClicked" BackgroundColor="#6A0DAD" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            
+            <BoxView x:Name="ColorPreview"
+                     HeightRequest="150"
+                     WidthRequest="150"
+                     VerticalOptions="EndAndExpand"
+                     HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
